@@ -1,0 +1,448 @@
+<%- include ("includes/header") %>
+
+<style>
+    /* Create three columns of equal width */
+.columns {
+  /*float: left;*/
+  /*width: 33.3%;*/
+  padding: 8px;
+}
+
+/* Style the list */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Pricing header */
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+/* List items */
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Grey list item */
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+/* The "Sign Up" button */
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Change the width of the three columns to 100%
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+
+.link-modal {
+  text-decoration: underline !important;
+}
+.link-modal:hover {
+  text-decoration: none !important;
+}
+
+.pricing-table,
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #dee2e6 !important;
+  border-collapse: collapse;
+  text-align: center;
+}
+.pricing-table th {
+  color: white !important;
+}
+
+/*td:nth-child(2) .fa-check {
+  color: #111;
+}
+td:nth-child(3) .fa-check {
+  color: #088dcd;
+}
+td:nth-child(4) .fa-check {
+  color: #40c016;
+}*/
+.fa-check {
+  color: #3fff00;
+}
+.fa-close {
+  color: red;
+}
+</style>
+
+<section class="premium-section">
+    <div class="gap white-bg">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <table class="table pricing-table">
+                <thead>
+                  <tr>
+                    <th style="color: black !important;">Features</th>
+                    <th style="background-color: #111; border-right: 1px solid #111 !important;">Free ($0)</th>
+                    <th style="background-color: #088dcd; border-right: 1px solid #088dcd !important;">Package 1 ($50)</th>
+                    <th style="background-color: #40c016;">Package 2 ($100)</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Login and Registration</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Update Profile</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Posts</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Like, Comment and Reply</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Share post on timeline</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Notifications for post like, comment and reply</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Search (users only)</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <!-- free version end -->
+
+                  <tr>
+                    <td>Search (users, pages and groups)</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Email Confirmation</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Reset Password</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Create Friends</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Create Pages</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Create Groups</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>Private user-to-user chat</td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td><b><a href="javascript:void(0);" class="link-modal" onclick="ondemoClicked(this);" data-href="seePeopleWhoViewedYourProfile">People who viewed your profile</a></b></td>
+
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td><b><a href="javascript:void(0);" class="link-modal" onclick="ondemoClicked(this);" data-href="seeEditDeletePost">Edit and delete post</a></b></td>
+
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <!-- package 1 end -->
+
+                  <tr>
+                    <td><b><a href="javascript:void(0);" onclick="ondemoClicked(this);" class="link-modal" data-href="loadMorePosts">Load more posts using AJAX</a></b></td>
+
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td><b><a href="javascript:void(0);" onclick="ondemoClicked(this);" class="link-modal" data-href="sendImagesAndVideosInChat">Send images and videos in chat messages</a></b></td>
+
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td><b><a href="javascript:void(0);" onclick="ondemoClicked(this);" class="link-modal" data-href="sharePostInTimelinePageGroup">Share post in timeline, pages and groups</a></b></td>
+
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td><b><a href="javascript:void(0);" onclick="ondemoClicked(this);" class="link-modal" data-href="peopleLikedAndSharedPost">View list of people who liked and shared your post</a></b></td>
+
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-close"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 50px;">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="columns">
+                        <ul class="price">
+                            <li class="header">Free</li>
+                            <li class="grey">$0</li>
+                            <li>Login and Registration</li>
+                            <li>Update Profile</li>
+                            <li>Posts</li>
+                            <li>Like, Comment and Reply</li>
+                            <li>Share post on timeline</li>
+                            <li>Notifications for post like, comment and reply</li>
+                            <li>Search (users only)</li>
+                            <!-- <li class="grey"><a href="#" class="button">Sign Up</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="columns">
+                        <ul class="price">
+                            <li class="header" style="background-color: #088dcd;">Premium Package 1</li>
+                            <li class="grey">$50</li>
+                            <li>All features of free version</li>
+                            <li>+</li>
+                            <li>Search (users, pages and groups)</li>
+                            <li>Email Confirmation</li>
+                            <li>Reset Password</li>
+                            <li>Create Friends</li>
+                            <li>Create Pages</li>
+                            <li>Create Groups</li>
+                            <li>Private user-to-user chat</li>
+                            <li><b><a href="javascript:void(0);" class="link-modal" onclick="ondemoClicked(this);" data-href="seePeopleWhoViewedYourProfile">People who viewed your profile</a></b></li>
+                            <li><b><a href="javascript:void(0);" class="link-modal" onclick="ondemoClicked(this);" data-href="seeEditDeletePost">Edit and delete post</a></b></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="columns">
+                        <ul class="price">
+                            <li class="header" style="background-color: #40c016;">Premium Package 2</li>
+                            <li class="grey">$100</li>
+                            <li>All features of Package 1</li>
+                            <li>+</li>
+                            
+                            <li><b><a href="javascript:void(0);" onclick="ondemoClicked(this);" class="link-modal" data-href="loadMorePosts">Load more posts using AJAX</a></b></li>
+                            
+                            <li><b><a href="javascript:void(0);" onclick="ondemoClicked(this);" class="link-modal" data-href="sendImagesAndVideosInChat">Send images and videos in chat messages</a></b></li>
+                            
+                            <li><b><a href="javascript:void(0);" onclick="ondemoClicked(this);" class="link-modal" data-href="sharePostInTimelinePageGroup">Share post in timeline, pages and groups</a></b></li>
+
+                            <li><b><a href="javascript:void(0);" onclick="ondemoClicked(this);" class="link-modal" data-href="peopleLikedAndSharedPost">View list of people who liked and shared your post</a></b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-12">
+                    <p style="color: #535353; font-size: 16px;" class="text-center">To buy this project, please send an email to <b>adnanafzal565@gmail.com</b> or WhatsApp at <b>+923105461304</b> with your following information:</p>
+                    <table class="table">
+                        <tr>
+                            <th>Name:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Country:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Project:</th>
+                            <td>Social networking site in Node JS and Mongo DB</td>
+                        </tr>
+                        <tr>
+                            <th>Package:</th>
+                            <td>Premium Package 2</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-12">
+                    <p style="color: #535353; font-size: 16px;" class="text-center">
+                        Or <b>pay directly</b> to the following Payoneer account:
+                    </p>
+
+                    <table class="table">
+                        <tr>
+                            <th>Name:</th>
+                            <td>Adnan Afzal</td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td>adnanafzal565@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th>Country:</th>
+                            <td>Pakistan</td>
+                        </tr>
+                        <tr>
+                            <th>Description:</th>
+                            <td>Social networking site in Node JS and Mongo DB</td>
+                        </tr>
+                        <tr>
+                            <th>Amount:</th>
+                            <td>$100 (USD)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+  function ondemoClicked(self) {
+    var value = self.getAttribute("data-href");
+    
+    if (value == "seePeopleWhoViewedYourProfile") {
+      document.querySelector("#demoModal .modal-title").innerHTML = "People who viewed your profile";
+      document.querySelector("#demoModal .modal-body iframe").setAttribute("src", "https://www.youtube.com/embed/nS7K9xaYBpE");
+    }
+
+    if (value == "seeEditDeletePost") {
+      document.querySelector("#demoModal .modal-title").innerHTML = "Edit and delete post";
+      document.querySelector("#demoModal .modal-body iframe").setAttribute("src", "https://www.youtube.com/embed/L074n5LUy7k");
+    }
+
+    if (value == "loadMorePosts") {
+      document.querySelector("#demoModal .modal-title").innerHTML = "Load more posts using AJAX";
+      document.querySelector("#demoModal .modal-body iframe").setAttribute("src", "https://www.youtube.com/embed/5iUhX7Ea87k");
+    }
+
+    if (value == "sendImagesAndVideosInChat") {
+      document.querySelector("#demoModal .modal-title").innerHTML = "Send images and videos in chat messages";
+      document.querySelector("#demoModal .modal-body iframe").setAttribute("src", "https://www.youtube.com/embed/xnbp7yazFDM");
+    }
+
+    if (value == "sharePostInTimelinePageGroup") {
+      document.querySelector("#demoModal .modal-title").innerHTML = "Share post in timeline, pages, and groups";
+      document.querySelector("#demoModal .modal-body iframe").setAttribute("src", "https://www.youtube.com/embed/MN6CYkmal3c");
+    }
+
+    if (value == "peopleLikedAndSharedPost") {
+      document.querySelector("#demoModal .modal-title").innerHTML = "View list of people who liked and shared your post";
+      document.querySelector("#demoModal .modal-body iframe").setAttribute("src", "https://www.youtube.com/embed/899zvOhe3eo");
+    }
+
+    $("#demoModal").modal("show");
+  }
+</script>
+
+<div class="modal" id="demoModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include ("includes/footer") %>
